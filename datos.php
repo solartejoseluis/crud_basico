@@ -1,3 +1,4 @@
+
 <?php
 header('Content-Type: application/json');
 
@@ -30,9 +31,9 @@ switch ($_GET['accion']) {
 
     case 'modificar':
         $respuesta = mysqli_query($conexion, "update articulos set
-                                                  descripcion='$_POST[descripcion]',
-                                                  precio=$_POST[precio]
-                                               where codigo=$_GET[codigo]");
+        descripcion='$_POST[descripcion]',
+        precio=$_POST[precio]
+        where codigo=$_GET[codigo]");
         echo json_encode($respuesta);
         break;
 }
